@@ -1,0 +1,70 @@
+{% extends 'base.html' %}#继承了base.html的内容
+{% load extratags %}　
+{% load static %}
+{% block csstyle %}
+
+    <style type="text/css">
+    input{
+        color: #1a1a1a;
+    }
+    div.one{
+        margin-top: 50px;
+        overflow: left;
+        color: #980000;
+    }
+    div.one > p {
+        display: inline-block;
+        width: 20%;
+        float: left;
+        margin-right: 5%;
+        height: 40px;
+
+    }
+    div.three > p
+    {
+        display: inline-block;
+        width: 45%;
+        float: left;
+        margin-right: 5%;
+        height: 40px;
+        margin-top: 50px;
+    }
+
+    div.four > p {
+        display: inline-block;
+        width: 20%;
+        float: left;
+        margin-right: 5%;
+        height: 40px;
+        margin-top: 50px;
+    }
+    div.five{
+        margin-top: 50px;
+    }
+    div.five > p {
+        height: 20px;
+    }
+    </style>
+
+{% endblock %}
+{% block content %}
+<section class="wrapper">
+    <div class="row" style="padding: 30px">
+        <div style="clear: both;margin-top: 50px">
+            <p><span>本数据库名为生物粘合蛋白数据库（Adhesive Protein Database），数据来源于NCBI的蛋白库，目的是为了模块化生物粘合蛋白的合成提供设计参考。实现了对蛋白质的NCBI编号的具体查询,对物种来源、蛋白质名称和说明的模糊查询:</span></p>
+            <p><span>并提供了对于某些蛋白期刊来源的直接域名跳转功能</span></p>
+            <p><span>使用说明：请在查询物种名称时尽量正确填写大小写</span></p>
+            <p><span>分类说明：</span></p>
+            <p><span>BCT：细菌与古菌；</span></p>
+            <p><span>INV:无脊椎动物；</span></p>
+            <p><span>ROD：啮齿类动物；</span></p>
+            <p><span>PRI：灵长类动物；</span></p>
+            <p><span>MAM：其他哺乳动物；</span></p>
+            <p><span>PLN：植物和真菌；</span></p>
+            <p><span>PAT：专利；</span></p>
+            <p><span>VRT：除哺乳动物外其他脊椎动物</span></p>
+            <a href="/" class="logo" style="height: 200px"><img src="{% static 'images/分类截图.PNG' %}" style="height: 100%"></img></a>
+
+        </div>
+</section>
+{% endblock %}

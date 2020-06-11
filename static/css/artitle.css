@@ -1,0 +1,109 @@
+body{background: url(../image/bg.jpg);}
+article{text-indent: 20px;color: #555;font-size: 14px;
+    margin: 15px auto;line-height: 28px; border-bottom: 1px dashed #ccc;padding: 20px;}
+.artical_content{width: 80%;height:auto;overflow: auto;background: #fff; border: 1px solid #EEE;margin: 20px auto;padding-bottom: 30px;}
+.content_head{height: 80px;border-bottom: 1px solid #eee;text-align: center;margin:0 auto;padding: 15px 0;}
+.time{color: #999;margin: 10px;}
+
+.article_title{font-size: 18px;color: #333;font-weight: 800;}
+.paging{ padding: 15px 0;margin: 0 auto;clear: both;}
+.paging_left{float: left; color: #555;}
+.paging_right{float: right;color: #555;}
+.paging span{color: green;font-weight: bold;}
+.content_nav{width: 800px;  color: #777;margin: 0 auto;margin-top: 20px;margin-bottom: -15px;}
+.content-img{margin-top:10px;max-width: 80%}
+
+.comment-content-type
+{
+    float:left;
+}
+.comment-content
+{
+    height: 260px;
+    font-size: 14px;
+    text-align: left;
+    overflow: auto;
+    user-modify: read-write-plaintext-only;
+    margin: 5px 8%;
+    border: solid 1px darkgray;
+    border-radius: 10px;
+}
+.comment-publish {
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+.feedback_area_title
+{
+    font: normal normal 16px/35px "Microsoft YaHei";
+    margin: 0px 8%;
+    border-bottom: 2px solid #cccccc;
+}
+
+.commend-item{
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0px 8%;
+}
+.commend-item:hover {
+    border: 1px solid #169fe6;
+    position: relative;
+    z-index: 10;
+}
+.commend-data
+{
+    font-size: 12px;
+    color: #999;
+}
+.commend-people{
+    font-size: 12px;
+    color:cornflowerblue
+}
+.commend-speak
+{
+    font-size: 12px;
+    text-indent:2em;
+
+}
+@media only screen and (max-width: 480px) {
+    .artical_content {
+        width: 100%;
+        margin: 0;
+    }
+    .content_head {
+        width: 90%;
+        height: auto;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+    .article_title {
+        font-size: 14px;
+    }
+    .time {
+        margin: 4px;
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+    article {
+        width: 90%;
+        font-size: 12px;
+        margin: 0 auto;
+        line-height: 18px;
+    }
+    .paging {
+        width: 90%;
+        padding: 10px 0;
+        margin: 0 auto;
+        clear: both;
+    }
+    .paging_right {
+        float:left;
+    }
+
+
+}

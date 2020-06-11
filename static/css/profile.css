@@ -1,0 +1,82 @@
+.profile
+    {
+        width: 70%;
+        height: 600px;
+        margin: 60px 0;
+        border: 1px solid #eee;
+        float: left;
+        overflow: hidden;
+    }
+.profile > p{
+    height: 40px;
+    background-color: lightgray;
+    color: black;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.profile > form {
+    overflow: hidden;
+    margin-top: -10px;
+}
+.profile > form > div.left {
+    float: left;
+    width: 40%;
+    border-right:1px solid #eee;
+}
+.profile > form > div.left > div:nth-child(1) {
+    height: 300px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+.profile > form > div.left > div:nth-child(1) > input{
+    display: none;
+}
+.profile > form > div.left > div:nth-child(1) > button{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom:40px;
+}
+
+.profile > form > div.left > div:nth-child(2){
+    height: 150px;
+    position: relative;
+}
+.profile > form > div.left > div:nth-child(2) > div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)translateX(-50%);
+    left: 50%;
+}
+
+.profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    position: absolute;
+    transform: translateX(-50%);left: 50%;
+    top:40px;
+}
+.profile div.right{
+    float: left;
+    width: 60%;
+}
+.profile div.right > div{
+    border-bottom: 1px solid #eee;
+    padding: 12px 30px;
+}
+.profile div.right > div > input{
+    width: 300px;
+}
+.profile div.show-submit{
+    border: none;
+    position: relative;
+    height: 94px;
+}
+.profile div.show-submit > input{
+    width:100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)translateX(-50%);
+    left: 30%;
+}

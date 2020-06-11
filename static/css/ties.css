@@ -1,0 +1,226 @@
+.div-center
+{
+    width: 90%;
+    margin: auto;
+}
+.section-left
+{
+    width: 70%;
+    float:left;
+    border: 1px solid #ddd;
+}
+.section-right
+{
+    width: 30%;
+    float:right;
+}
+.tie-op
+{
+    position: absolute;
+    right: 10px;
+    top:-30px;
+}
+.tie-op a, .publishtype a
+{
+    font-size: 14px;
+    margin-right: 10px;
+}
+.ties-list{
+    position: relative;
+    margin: 15px auto;
+    width: 95%;
+}
+.tie-item{
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 10px 20px;
+    margin-bottom: -1px;
+}
+.tie-item:hover {
+    border: 1px solid #169fe6;
+    position: relative;
+    z-index: 10;
+}
+.tie-title
+{
+    font-size: 16px;
+    line-height: 1.5em;
+    float: left;
+    clear: right;
+}
+
+.tie-title a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.tie-content
+{
+    font-size: 14px;
+    color: #333;
+    line-height: 200%;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    padding: 15px 0;
+    clear: both;
+}
+.tie-desc-link
+{
+    color: #9ab26b;
+    padding-left: 5px;
+}
+.tie-desc {
+    clear: both;
+    color: #bcbcbc;
+    float: none;
+    text-align: left;
+    line-height: 200%;
+    font-size: 12px;
+}
+.page {
+    margin: 30px auto;
+    width: 60%;
+}
+
+.modal-header1
+{
+    padding: 15px;
+    border-bottom: 3px solid #456f14;
+}
+.modal-body1
+{
+    text-align: center;
+    padding: 20px 0;
+}
+.modal-footer1
+{
+    text-align: right;
+}
+.publish-title
+{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: normal;
+    background-color: transparent;
+    width: 80%;
+}
+.publishtype
+{
+    float:left;
+    margin-left: 10px;
+}
+.publishcontent
+{
+    height: 600px;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    text-indent:2em;
+    overflow: auto;
+    user-modify: read-write-plaintext-only;
+}
+.selectpubtype
+{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.modal-title
+{
+    position: relative;
+}
+a.btn {
+        display: inline-block;
+        padding: .6em 1.1em;
+        font-size: 1.625rem;
+        text-decoration: none;
+        outline: none;
+        color: #0f0f0f;
+        width: 46%;
+        margin-left: 2%;
+        margin-top: 10px;
+        border-radius: 3px;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        -webkit-box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #fe4365;
+        box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #fe4365;
+        border: none;
+        -webkit-transition: -webkit-box-shadow .3s;
+        transition: box-shadow .3s;
+    }
+    a.btn:hover, a.btn:focus {
+        -webkit-box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #ff0364;
+        box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #ff0364;
+        -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+        transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+        -webkit-animation: gelatine 0.5s 1;
+        animation: gelatine 0.5s 1;
+        background-color: rgb(236, 219, 41);
+    }
+    div.intresting
+    {
+        width: 90%;
+        margin: auto;
+        background-color: transparent;
+    }
+
+@media only screen and (max-width: 400px) {
+    .section-left {
+        width: 100%;
+    }
+    .ties-list {
+        width: 100%;
+    }
+    .tie-op {
+        top: -30px;
+        margin: 0 auto;
+    }
+    .tie-content {
+        font-size: 14px;
+        line-height: 100%;
+        padding: 10px 0;
+    }
+    .tie-item {
+        padding: 5px 20px;
+        overflow: auto;
+    }
+    .page {
+        width: 80%;
+    }
+    .pagination {
+        margin-top: -10px;
+        margin-left: 10px;
+    }
+    .pagination > li {
+        height: 24px;
+        width: 24px;
+    }
+    .pagination > li > a, .pagination > li > span {
+        padding: 1px 5px;
+        height: 24px;
+        width: 24px;
+    }
+    .sidebar {
+        width: 100%;
+        float: right;
+    }
+    .sidebar-me {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .sidebar-me-title {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+    .sidebar-me-content {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    .sidebar-me-content ul li {
+        padding: 4px;
+        font-size: 12px;
+    }
+}

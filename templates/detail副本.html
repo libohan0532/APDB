@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load extratags %}　
+{% load static %}
+{% block csstyle %}
+
+    <style type="text/css">
+    input{
+        color: #1a1a1a;
+    }
+    div.one{
+        margin-top: 50px;
+        overflow: hidden;
+    }
+    div.one > p {
+        display: inline-block;
+        width: 20%;
+        float: left;
+        margin-right: 5%;
+        height: 40px;
+
+    }
+    div.three > p
+    {
+        display: inline-block;
+        width: 45%;
+        float: left;
+        margin-right: 5%;
+        height: 40px;
+        margin-top: 50px;
+    }
+
+    div.four > p {
+        display: inline-block;
+        width: 20%;
+        float: left;
+        margin-right: 5%;
+        height: 40px;
+        margin-top: 50px;
+    }
+    div.five{
+        margin-top: 50px;
+    }
+    div.five > p {
+        height: 20px;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+<section class="wrapper">
+    <div class="row" style="padding: 30px">
+        <div class="one">
+            <p><span>编号:</span>{{ obj.locus }}</p>
+            <p><span>氨基酸数目:</span>{{ obj.length }}</p>
+            <p><span>分子类型:</span>{{ obj.moltype }}</p>
+            <p><span>分类:</span>{{ obj.division }}</p>
+            <p><span>拓扑学形状:</span>{{ obj.topology }}</p>
+            <p><span>正式名称:</span>{{ obj.definition }}</p>
+            <p><span>序列来源:</span>{{ obj.source }}</p>
+            <p><span>物种名称:</span>{{ obj.organism }}</p>
+
+            <p><span>初始版本号:</span>{{ obj.primary_accession }}</p>
+            <p><span>版本号:</span>{{ obj.accession_version }}</p>
+        </div>
+
+        <div style="clear: both;margin-top: 50px">
+          <p><span>分类:</span>{{ obj.taxonomy }}</p>
+        </div>
+
+        <div class="three">
+            <p><span>电子期刊编码种类:</span>{{ obj.Reference_Xref_dbname }}</p>
+            <p><span>电子期刊编码:</span>{{ obj.Refernce_Xref_id }}</p>
+            <p><span>电子期刊原网页:</span>
+                <a href="https://doi.org/{{ obj.Refernce_Xref_id }}" target="_blank">http://doi.org/{{ obj.Refernce_Xref_id }}</a></p>
+            <p><span>pubmed:</span>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/{{ obj.Reference_pubmed }}" target="_blank">http://pubmed.ncbi.nlm.nih.gov/{{ obj.Reference_pubmed }}</a></p>
+            <p><span>序列编号1:</span>{{ obj.other_seqids_INSDSeqid_1 }}</p>
+            <p><span>参考文献1:</span>{{ obj.Reference_reference_1 }}</p>
+            <p><span>参考文献1名称:</span>{{ obj.Reference_title_1 }}</p>
+            <p style="display: block"><span>参考文献期刊1:</span>{{ obj.Reference_journal_1 }}</p>
+            <p><span>对应氨基酸序列位置1:</span>{{ obj.Reference_position_1 }}</p>
+
+            <p><span>序列编号2:</span>{{ obj.other_seqids_INSDSeqid_2 }}</p>
+            <p><span>参考文献2:</span>{{ obj.Reference_reference_2 }}</p>
+            <p><span>参考文献2名称:</span>{{ obj.Reference_title_2 }}</p>
+            <p><span>对应氨基酸序列位置2:</span>{{ obj.Reference_position_2 }}</p>
+            <p style="display: block"><span>参考文献期刊2:</span>{{ obj.Reference_journal_2 }}</p>
+
+        </div>
+
+        <div class="four" style="clear: both">
+            <p><span>更新日期:</span>{{ obj.update_date }}</p>
+            <p><span>创建日期:</span>{{ obj.create_date }}</p>
+            <p><span>备注说明:</span>{{ obj.comment }}</p>
+            <p><span>来源数据库及其编号:</span>{{ obj.source_db }}</p>
+        </div>
+        <div class="five" style="clear: both">
+            <p><span>氨基酸序列</span>
+                {{ obj.sequence | cut_seq | safe}}
+            </p>
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}
