@@ -10,11 +10,11 @@ from django.http import HttpResponse
 class HomeView(View):
 
     @csrf_exempt
-    def dispatch(self, *args, **kwargs):
+    def dispatch(self, *args, **kwargs):#传递可变参数
         return super(HomeView, self).dispatch(*args, **kwargs)
 
     def get(self, request):
-        obj_list = DataModel.objects.all()
+        obj_list = DataModel.objects.all()#理论上可以查询所有字段
         key = request.GET.get("key", "")
         value = request.GET.get("value", "")
         if key == 'locus' and value:
@@ -45,6 +45,7 @@ class DetailView(View):
         locus = request.GET.get("locus")
         obj = DataModel.objects.get(locus=locus)
         return render(request, 'detail.html', {"obj": obj})
+    #将搜索获得的locus名称传给前端
 
 class IntroView(View):
     def get(self, request):

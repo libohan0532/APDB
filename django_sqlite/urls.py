@@ -24,3 +24,4 @@ urlpatterns = [
     path('detail', DetailView.as_view(), name='detail'),
     path('introduction', IntroView.as_view(), name='introduction')
 ]
+#设置的页面，添加新页面时要同时修改.html样式和加入ulrs.py
